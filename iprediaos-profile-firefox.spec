@@ -22,7 +22,6 @@ Skeleton template for Firefox.
 
 
 %build
-%configure
 make %{?_smp_mflags}
 
 
