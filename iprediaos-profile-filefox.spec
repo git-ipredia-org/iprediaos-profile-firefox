@@ -1,19 +1,21 @@
-Name:		
-Version:	
+Name:		iprediaos-profile-firefox		
+Version:	1
 Release:	1%{?dist}
-Summary:	
+Summary:	Firefox profile for IprediaOS
 
-Group:		
-License:	
-URL:		
-Source0:	
+Group:		System Environment/Base
+License:	GPL
+URL:		http://www.ipredia.org		
+Source0:	%{name}-%{version}.tar.bz2
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
-BuildRequires:	
-Requires:	
+BuildArch:	noarch
+
+#BuildRequires:	
+Requires:	firefox
 
 %description
-
+Skeleton template for Firefox.
 
 %prep
 %setup -q
