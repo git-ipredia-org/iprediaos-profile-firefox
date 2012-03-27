@@ -18,4 +18,4 @@ archive: tag
 	@echo "$(NAME)-$(VERSION).tar.bz2 created"
 
 clean:
-rm -f *~ *bz2
+	rm -f *~ *bz2
