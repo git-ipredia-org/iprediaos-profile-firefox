@@ -38,4 +38,5 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-
+* Tue Mar 27 2012 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 1-1
+- Initial package
