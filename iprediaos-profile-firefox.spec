@@ -33,7 +33,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %doc
-
+%{_sysconfdir}/skel/.mozilla/firefox/a.default/user.js
+%{_sysconfdir}/skel/.mozilla/firefox/profiles.ini
 
 
 %changelog
