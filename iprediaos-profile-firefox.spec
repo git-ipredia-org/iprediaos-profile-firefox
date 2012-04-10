@@ -1,6 +1,6 @@
 Name:		iprediaos-profile-firefox		
 Version:	1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Firefox profile for IprediaOS
 
 Group:		System Environment/Base
@@ -25,6 +25,11 @@ Skeleton template for Firefox.
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
+# Add dist to startpage URL (add it to ?os=)
+# Remove the dot from dist
+os=$(echo %{?dist} | sed "s:\.::g")
+sed -i "s:?os=:?os=$os:g" $RPM_BUILD_ROOT%{_sysconfdir}/skel/.mozilla/firefox/a.default/user.js
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -38,5 +43,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Apr 10 2012 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 1-2
+- Add os to startpage URL
+
 * Tue Mar 27 2012 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 1-1
 - Initial package
