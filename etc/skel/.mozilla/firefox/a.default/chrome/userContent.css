@@ -9,3 +9,7 @@
 #errorPageContainer div#errorLongDesc ul {
   display: none;
 }
+
+div#errorPageContainer {
+  background: #f0f0f0 url("http://localhost:7657/themes/snark/ubergine/images/hat.png") no-repeat scroll right bottom !important;
+}
