@@ -1,3 +1,11 @@
-#errorPageContainer p:before {
-  content: "Please have patience as I2P boots up and find peers.\a";
+#errorPageContainer h1:before {
+  content: "Please have patience as I2P boots up and find peers. Try to reload the page or check your I2P router status. ";
+}
+
+#errorPageContainer p#errorShortDescText:before {
+  content: "The first time you start I2P it may take a few minutes to bootstrap (integrate) you into the network and find additional peers to optimize your integration, so please be patient. When I2P starts up, and during normal operation, I2P's tunnel build readiness indicator (immediately above the Local Destinations section in the I2P Router Console) may tell you that I2P is Rejecting Tunnels; this is normal behavior and should be of no cause for concern! Once green stars are indicated next to your Local Destinations, there is a wide variety of things you can do with I2P. \a\a";
+}
+
+#errorPageContainer div#errorLongDesc ul {
+  display: none;
 }
