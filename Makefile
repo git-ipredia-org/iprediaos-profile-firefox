@@ -11,6 +11,7 @@ tag:
 install:
 	@install -D etc/skel/.mozilla/firefox/profiles.ini ${DESTDIR}/etc/skel/.mozilla/firefox/profiles.ini
 	@install -D etc/skel/.mozilla/firefox/a.default/user.js ${DESTDIR}/etc/skel/.mozilla/firefox/a.default/user.js
+	@install -D etc/skel/.mozilla/firefox/a.default/chrome/userContent.css ${DESTDIR}/etc/skel/.mozilla/firefox/a.default/chrome/userContent.css
 
 archive: tag
 	@git archive --format=tar --prefix=$(NAME)-$(VERSION)/ HEAD > $(NAME)-$(VERSION).tar
