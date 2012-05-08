@@ -1,0 +1,3 @@
+#errorPageContainer p:before {
+  content: "Please have patience as I2P boots up and find peers.\a";
+}
