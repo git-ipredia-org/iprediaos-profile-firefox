@@ -1,6 +1,6 @@
 Name:		iprediaos-profile-firefox		
-Version:	1
-Release:	2%{?dist}
+Version:	1.1
+Release:	1%{?dist}
 Summary:	Firefox profile for IprediaOS
 
 Group:		System Environment/Base
@@ -40,9 +40,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc
 %{_sysconfdir}/skel/.mozilla/firefox/a.default/user.js
 %{_sysconfdir}/skel/.mozilla/firefox/profiles.ini
+%{_sysconfdir}/skel/.mozilla/firefox/a.default/chrome/userContent.css
 
 
 %changelog
+* Tue May 8 2012 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 1.1-1
+- Add userContent.css
+
 * Tue Apr 10 2012 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 1-2
 - Add os to startpage URL
 
