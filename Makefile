@@ -1,7 +1,7 @@
 NAME = iprediaos-profile-firefox
 
-VERSION := $(shell awk '/Version:/ { print $$2 }' $(NAME).spec)
-RELEASE := $(shell awk '/Release:/ { print $$2 }' $(NAME).spec | sed 's|%{?dist}||g')
+VERSION := $(shell awk '/Version:/ { print $$2 }' $(NAME).rel)
+RELEASE := $(shell awk '/Release:/ { print $$2 }' $(NAME).rel | sed 's|%{?dist}||g')
 TAG=$(NAME)-$(VERSION)-$(RELEASE)
 
 tag:
